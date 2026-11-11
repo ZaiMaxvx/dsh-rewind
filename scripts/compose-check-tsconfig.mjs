@@ -16,7 +16,8 @@ import { fileURLToPath } from 'node:url'
 
 const here = dirname(fileURLToPath(import.meta.url))
 const pkgRoot = resolve(here, '..')
-const dshRoot = resolve(pkgRoot, '..', 'dsh-source', 'src')
+// DSH_SRC selects the dsh source tree to check against (e.g. dsh-source-rc2).
+const dshRoot = resolve(pkgRoot, '..', process.env.DSH_SRC ?? 'dsh-source', 'src')
 const typesRoot = resolve(pkgRoot, '..', 'node_modules', '@types')
 
 const stripJsonComments = text => JSON.parse(text.replace(/^\s*\/\/.*$/gm, ''))

@@ -8,12 +8,14 @@
 import { isAbsolute } from 'node:path'
 import { pathToFileURL } from 'node:url'
 
+// DSH_SRC selects the dsh source tree to load (e.g. dsh-source-rc2).
+const DSH_SRC = process.env.DSH_SRC ?? 'dsh-source'
 const PATHS = (await import(new URL('../tsconfig.paths.json', import.meta.url).href, { with: { type: 'json' } })).default.compilerOptions.paths
 
 function toUrl(entry) {
   const cleaned = entry.replace(/^\.\//, '')
   if (isAbsolute(cleaned)) return pathToFileURL(cleaned).href
-  return new URL(`../../dsh-source/src/${cleaned}`, import.meta.url).href
+  return new URL(`../../${DSH_SRC}/src/${cleaned}`, import.meta.url).href
 }
 
 export async function resolve(specifier, context, nextResolve) {

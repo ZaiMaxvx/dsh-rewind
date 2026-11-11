@@ -13,12 +13,12 @@ import { readdirSync, readFileSync, statSync, writeFileSync, existsSync } from '
 import { join, dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-const [dshRoot, outFile] = process.argv.slice(2)
-if (dshRoot === undefined || outFile === undefined) {
+const [dshRootArg, outFile] = process.argv.slice(2)
+if (dshRootArg === undefined || outFile === undefined) {
   console.error('usage: gen-tsconfig-paths.mjs <dsh-source-root> <out-tsconfig>')
   process.exit(1)
 }
-const root = resolve(dshRoot)
+const root = resolve(dshRootArg)
 
 /** Collect candidate package.json locations under a group directory. */
 function packageDirs(groupDir) {

@@ -54,7 +54,9 @@ cordis.patch.yml        本组合包贡献的 bundle 层
 
 ## 安装
 
-需要 dsh ≥ 0.2.2-rc.1（Node ≥ 24.9）。
+需要 dsh ≥ 0.2.2-rc.1（Node ≥ 24.9）。已同时验证 dsh
+v0.2.2-rc.1 **与** v0.2.2-rc.2 —— rc.2 的 host/client API 对比未发现影响本插件的破坏性变化（见
+`docs/research/rc2-*-diff.md`）。
 
 ```sh
 # tarball / npm

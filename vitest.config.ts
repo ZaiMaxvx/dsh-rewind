@@ -4,7 +4,8 @@ import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vitest/config'
 
 const here = dirname(fileURLToPath(import.meta.url))
-const dshRoot = resolve(here, '..', 'dsh-source', 'src')
+// DSH_SRC selects the dsh source tree to alias (e.g. dsh-source-rc2).
+const dshRoot = resolve(here, '..', process.env.DSH_SRC ?? 'dsh-source', 'src')
 
 // Source-plane aliasing into the dsh source tree (mirrors the repo's own
 // tsconfig.base.json source resolution). External npm packages (zod, react…)

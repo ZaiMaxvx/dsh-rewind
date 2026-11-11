@@ -59,7 +59,9 @@ cordis.patch.yml        the bundle layer this package contributes
 
 ## Install
 
-Requires dsh ≥ 0.2.2-rc.1 (Node ≥ 24.9).
+Requires dsh ≥ 0.2.2-rc.1 (Node ≥ 24.9). Verified against dsh
+v0.2.2-rc.1 **and** v0.2.2-rc.2 — the rc.2 host/client API diff found no
+breaking changes for this plugin (see `docs/research/rc2-*-diff.md`).
 
 ```sh
 # from a tarball / npm
