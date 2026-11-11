@@ -1,0 +1,11 @@
+node_modules/
+lib/
+dist/
+*.tsbuildinfo
+# Generated local verification configs (absolute machine paths)
+tsconfig.paths.json
+tsconfig.check.host.json
+tsconfig.check.client.json
+# Local scratch
+*.log
+.DS_Store

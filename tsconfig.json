@@ -1,0 +1,14 @@
+{
+  // For use inside the dsh workspace at packages/rewind/dsh-plugin-rewind/
+  // (extends the repo base, whose source-plane paths then apply). Outside the
+  // repo this file's extends target does not exist — use `pnpm check`, which
+  // type-checks both faces against the dsh source tree instead.
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "composite": false,
+    "incremental": false,
+    "types": ["node"]
+  },
+  "include": ["src/*.ts", "tests/**/*.ts"]
+}
