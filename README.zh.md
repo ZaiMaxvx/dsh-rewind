@@ -1,5 +1,7 @@
 # dsh-plugin-rewind（回退插件）
 
+> **注记**：开发主场已迁移至 [ZaiMaxvx/dsh-utils](https://github.com/ZaiMaxvx/dsh-utils) 综合仓库（`plugins/rewind`）；本仓库仍是独立安装渠道。
+
 为 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（dsh）`v0.2.2-rc.1`
 打造的回退插件：把会话的**模型上下文**恢复到更早的位置——提供 `/rewind`
 斜杠命令、裸调用的撤销选择器、以及 Web 聊天中每一轮的回退按钮。

@@ -1,5 +1,7 @@
 # dsh-plugin-rewind
 
+> **Note**: development has moved to the [ZaiMaxvx/dsh-utils](https://github.com/ZaiMaxvx/dsh-utils) monorepo (`plugins/rewind`); this repository remains the standalone install channel.
+
 Rewind for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (dsh) `v0.2.2-rc.1`:
 restore a session's **model context** to an earlier point — a `/rewind` slash
 command, a bare-invocation undo picker, and per-turn rewind actions in the Web
