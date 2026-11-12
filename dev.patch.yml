@@ -1,6 +1,6 @@
 # Development overlay - load the host half straight from source:
 #   pnpm dsh web --patch ./dev.patch.yml
-# (requires a dsh source checkout running with tsx; installed profiles load lib/ instead)
+# (requires a dsh source checkout running with tsx; installed profiles load lib/)
 - insert:
     - id: rewind
       name: 'D:/Code/Projects/dsh-utils/repo/src/index.ts'
