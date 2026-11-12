@@ -1,6 +1,6 @@
 # 调研笔记 06：现有插件实现示例与工程化（dsh v0.2.2-rc.1）
 
-源码根：`D:/Code/Projects/dsh-rewind/dsh-source/src`（GitHub deepseek-ai/deepseek-harness，tag dsh-v0.2.2-rc.1）。所有下文相对路径均以此根为前缀（记作 `src/`）。
+源码根：`D:/Code/Projects/dsh-utils/dsh-source/src`（GitHub deepseek-ai/deepseek-harness，tag dsh-v0.2.2-rc.1）。所有下文相对路径均以此根为前缀（记作 `src/`）。
 
 结论速览：仓库内所有真实插件都是 **cordis 命名导出插件**（`export const name / inject / Config / apply`，无 default export）。入口统一是 TS 源码 `src/index.ts`；仓库内开发与测试走 **source plane**（tsx + tsconfig paths 直接跑 TS），发布/安装态走 **tsdown 预编译单文件 `lib/index.js`**。对 rewind 插件最合适的脚手架模板是 **`packages/todo/tool-todo`（工具+session projection 型）**，若 rewind 需要读取/回滚会话消息，`packages/context/time-context` 的 pre-step + projection 组合与 `packages/plan/plan-mode` 的 Service + 命令 + 工具 + session 事件 + projection 是最完整的两层范本。
 

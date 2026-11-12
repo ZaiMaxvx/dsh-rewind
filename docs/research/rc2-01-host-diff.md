@@ -1,8 +1,8 @@
 # rc2-01：dsh v0.2.2-rc.1 → v0.2.2-rc.2 host 侧 API 差异（针对 rewind 插件）
 
-- 旧版：`D:/Code/Projects/dsh-rewind/dsh-source/src`（tag dsh-v0.2.2-rc.1）
-- 新版：`D:/Code/Projects/dsh-rewind/dsh-source-rc2/src`（tag dsh-v0.2.2-rc.2）
-- 被评估对象：`D:/Code/Projects/dsh-rewind/rewind-plugin/src/`
+- 旧版：`D:/Code/Projects/dsh-utils/dsh-source/src`（tag dsh-v0.2.2-rc.1）
+- 新版：`D:/Code/Projects/dsh-utils/dsh-source-rc2/src`（tag dsh-v0.2.2-rc.2）
+- 被评估对象：`D:/Code/Projects/dsh-utils/rewind-plugin/src/`
 - 方法：对指定文件逐个 `diff -u`，对 `packages/core/session`、`packages/interaction/commands`、`packages/session-query`、`packages/llm`、`packages/boot`、`packages/client/*`、`src/docs` 做递归 diff 摘要后聚焦核对。
 
 ## 逐点结论

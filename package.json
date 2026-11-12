@@ -1,18 +1,20 @@
 {
   "name": "dsh-plugin-rewind",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Rewind for DeepSeek Harness (dsh): restore a session's model context to an earlier point via an append-only surface replacement — /rewind command, picker, and turn-tail actions.",
   "type": "module",
   "license": "MIT",
-  "main": "src/index.ts",
+  "main": "lib/index.js",
   "exports": {
-    ".": "./src/index.ts",
-    "./client": "./src/client/index.ts",
-    "./planner": "./src/planner.ts",
-    "./rewind": "./src/rewind.ts",
-    "./types": "./src/types.ts",
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
     "./package.json": "./package.json",
-    "./locale/*.json": "./locale/*.json"
+    "./locale/*.json": "./locale/*.json",
+    "./src/*": "./src/*"
   },
   "dsh": {
     "bundle": {
@@ -33,13 +35,13 @@
     "dsh": ">=0.2.2-rc.1 <0.3.0"
   },
   "scripts": {
-    "test": "node --import ./scripts/register-hooks.mjs --import tsx scripts/smoke.session.mjs && vitest run tests/planner.spec.ts",
-    "check": "tsc -p tsconfig.check.host.json --noEmit && tsc -p tsconfig.check.client.json --noEmit"
+    "test": "node --import ./scripts/register-hooks.mjs --import tsx scripts/smoke.session.mjs && vitest run tests/planner.spec.ts"
   },
   "files": [
-    "src",
+    "lib",
     "locale",
     "cordis.patch.yml",
+    "LICENSE",
     "README.md",
     "README.zh.md"
   ],
@@ -48,5 +50,13 @@
     "deepseek-harness",
     "rewind",
     "plugin"
-  ]
+  ],
+  "homepage": "https://github.com/ZaiMaxvx/dsh-rewind#readme",
+  "bugs": {
+    "url": "https://github.com/ZaiMaxvx/dsh-rewind/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZaiMaxvx/dsh-rewind.git"
+  }
 }

@@ -1,9 +1,6 @@
-# Development overlay — load the host half straight from TypeScript source:
+# Development overlay - load the host half straight from source:
 #   pnpm dsh web --patch ./dev.patch.yml
-# Patch lines must use absolute paths (a patch only contributes config; it
-# does not change the loader's module-resolution base). The host half runs
-# under Node >= 24.9 native type-stripping; the browser half needs the
-# tsdown client bundle first (see README "Development").
+# (requires a dsh source checkout running with tsx; installed profiles load lib/ instead)
 - insert:
     - id: rewind
-      name: 'D:/Code/Projects/dsh-rewind/rewind-plugin/src/index.ts'
+      name: 'D:/Code/Projects/dsh-utils/repo/src/index.ts'

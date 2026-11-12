@@ -1,6 +1,6 @@
 # 调研笔记 05：UI 扩展点与客户端 SDK（dsh v0.2.2-rc.1）
 
-源码根：`D:/Code/Projects/dsh-rewind/dsh-source/src`（GitHub deepseek-ai/deepseek-harness tag `dsh-v0.2.2-rc.1`）。所有路径均相对该根。
+源码根：`D:/Code/Projects/dsh-utils/dsh-source/src`（GitHub deepseek-ai/deepseek-harness tag `dsh-v0.2.2-rc.1`）。所有路径均相对该根。
 
 核心结论（先读这个）：
 - dsh 的 UI 扩展体系 = **Cordis 插件 + 声明合并的类型化 Slot 系统**。浏览器半边（`./client` 导出）通过 `ctx.slots.register/inject` 把组件挂进固定槽位；宿主半边通过 `ctx.commands`、`ctx.sessions`、`ctx.sessionProjections` 等服务注册命令/投影。

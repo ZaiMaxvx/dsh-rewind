@@ -1,6 +1,6 @@
 # 调研笔记 #1：deepseek-harness (dsh) v0.2.2-rc.1 整体架构
 
-> 源码：`D:/Code/Projects/dsh-rewind/dsh-source/src`（GitHub deepseek-ai/deepseek-harness，tag `dsh-v0.2.2-rc.1`，pnpm monorepo）。
+> 源码：`D:/Code/Projects/dsh-utils/dsh-source/src`（GitHub deepseek-ai/deepseek-harness，tag `dsh-v0.2.2-rc.1`，pnpm monorepo）。
 > 本文所有路径均相对该根目录。调研日期：2026-11-11。
 
 ## 1. 仓库顶层结构

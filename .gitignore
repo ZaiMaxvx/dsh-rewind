@@ -1,6 +1,7 @@
 node_modules/
-lib/
 dist/
+# Committed install artifacts (the package ships lib/)
+!lib/**
 *.tsbuildinfo
 # Generated local verification configs (absolute machine paths)
 tsconfig.paths.json

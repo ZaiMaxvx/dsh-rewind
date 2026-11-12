@@ -1,6 +1,6 @@
 # dsh (deepseek-harness) v0.2.2-rc.1 插件系统与插件制作指南 — 调研笔记
 
-调研子 agent #2。源码根：`D:/Code/Projects/dsh-rewind/dsh-source/src`（GitHub tag `dsh-v0.2.2-rc.1`）。所有路径均相对该根目录（除特别标注）。
+调研子 agent #2。源码根：`D:/Code/Projects/dsh-utils/dsh-source/src`（GitHub tag `dsh-v0.2.2-rc.1`）。所有路径均相对该根目录（除特别标注）。
 
 ---
 
@@ -250,7 +250,7 @@ profile 位于 `$DSH_HOME/profiles/<name>`，由两个文件描述：`package.js
 
 ---
 
-## 10. 关键文件路径索引（绝对路径前缀 `D:/Code/Projects/dsh-rewind/dsh-source/src/`）
+## 10. 关键文件路径索引（绝对路径前缀 `D:/Code/Projects/dsh-utils/dsh-source/src/`）
 
 - 教程：`docs/cordis-tutorial/index.zh.md`、`01-first-plugin.zh.md` … `07-into-the-harness.zh.md`
 - 插件开发用户文档：`docs/user/develop/basic/{index,tool,config,publish}.zh.md`、`docs/user/develop/framework/{index,service,events}.zh.md`、`docs/user/develop/practice/{index,llm-adapter,dynamic-cordis}.zh.md`

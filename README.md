@@ -1,7 +1,5 @@
 # dsh-plugin-rewind
 
-> **Note**: development has moved to the [ZaiMaxvx/dsh-utils](https://github.com/ZaiMaxvx/dsh-utils) monorepo (`plugins/rewind`); this repository remains the standalone install channel.
-
 Rewind for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (dsh) `v0.2.2-rc.1`:
 restore a session's **model context** to an earlier point — a `/rewind` slash
 command, a bare-invocation undo picker, and per-turn rewind actions in the Web
@@ -72,10 +70,11 @@ dsh plugin --profile <name> add dsh-plugin-rewind
 dsh plugin --profile <name> add github:<you>/dsh-plugin-rewind
 ```
 
-Publishing to npm ships prebuilt `lib/` output (tsdown, mirroring the repo's
-`tool-todo`/`time-context` shape: host `lib/index.js` + client bundle +
-`dsh.bundle.patch` + `engines.dsh`). This repository's `package.json` points
-at `src/` for source-plane development; run your bundler before `npm publish`.
+Installable artifacts are **prebuilt and committed** under `lib/` (`main`/`exports`
+point there; built by `tools/build.mjs` — esbuild host bundle + the
+`window.__ModuleLoader__` client script). Git / path / tarball / registry
+installs all work with zero build authorization; rebuild after source edits
+with `npm run build`.
 
 ## Development
 
@@ -87,9 +86,8 @@ Node ≥ 24.9 type-stripping runs it):
 pnpm dsh web --patch /abs/path/to/rewind-plugin/dev.patch.yml
 ```
 
-The browser half is loaded by the web bundle compiler; point `dsh.client` at a
-built bundle for full UI (or drop the package into `packages/rewind/` in the
-repo, where the workspace build handles both halves).
+Both halves ship prebuilt under `lib/` — the browser half is the
+`window.__ModuleLoader__` registration script, rebuilt with `npm run build`.
 
 ### Verification (no dsh install needed)
 

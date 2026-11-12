@@ -1,6 +1,6 @@
 # 调研 #3：dsh v0.2.2-rc.1 会话与消息历史持久化
 
-调研对象：`D:/Code/Projects/dsh-rewind/dsh-source/src`（GitHub deepseek-ai/deepseek-harness tag `dsh-v0.2.2-rc.1`）
+调研对象：`D:/Code/Projects/dsh-utils/dsh-source/src`（GitHub deepseek-ai/deepseek-harness tag `dsh-v0.2.2-rc.1`）
 主题：会话如何存储、消息/事件在持久层的表示、能否截断/重写/分支历史、与 rewind 插件的关系。
 
 ---

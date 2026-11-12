@@ -1,8 +1,8 @@
 # rc2 调研 02：dsh v0.2.2-rc.1 → rc.2 插件 client（Web）侧 API diff
 
-- 旧版（插件已适配）：`D:/Code/Projects/dsh-rewind/dsh-source/src`（dsh-v0.2.2-rc.1）
-- 新版：`D:/Code/Projects/dsh-rewind/dsh-source-rc2/src`（dsh-v0.2.2-rc.2）
-- 被评估对象：`D:/Code/Projects/dsh-rewind/rewind-plugin/src/client/`（TurnTailRewind.tsx + index.ts）
+- 旧版（插件已适配）：`D:/Code/Projects/dsh-utils/dsh-source/src`（dsh-v0.2.2-rc.1）
+- 新版：`D:/Code/Projects/dsh-utils/dsh-source-rc2/src`（dsh-v0.2.2-rc.2）
+- 被评估对象：`D:/Code/Projects/dsh-utils/rewind-plugin/src/client/`（TurnTailRewind.tsx + index.ts）
 
 插件 client 半实际用到的 API 面（供对照）：
 

@@ -1,6 +1,6 @@
 # 调研笔记 04：Agent 生命周期、事件系统与消息流（dsh v0.2.2-rc.1）
 
-> 源码根：`D:/Code/Projects/dsh-rewind/dsh-source/src`（GitHub deepseek-ai/deepseek-harness tag dsh-v0.2.2-rc.1）
+> 源码根：`D:/Code/Projects/dsh-utils/dsh-source/src`（GitHub deepseek-ai/deepseek-harness tag dsh-v0.2.2-rc.1）
 > 调读范围：docs/agent-lifecycle(.zh).md、docs/event-producer-consumer.md、docs/capability-seams.md、docs/glossary.md、packages/core/{agent,agent-loop,session,system-prompt}、packages/llm/llm、packages/api/session-controller、packages/client/{ui-chat,ui-trajectory}
 
 ---
